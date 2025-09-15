@@ -41,3 +41,10 @@ import GraphicSpecies from "../components/GraphicSpecies.astro";
     </section>
   </div>
 </Layout>
+
+<script>
+  document.querySelector("#species")?.addEventListener("change", (evt) => {
+    const value = (evt.target as HTMLSelectElement).value;
+    location.hash = value;
+  });
+</script>
