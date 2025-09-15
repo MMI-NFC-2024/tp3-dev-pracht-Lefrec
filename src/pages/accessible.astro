@@ -11,24 +11,61 @@ import {
 
 <Layout>
   <h1 class="text-2xl">Méthode 3 : Une seule page avec ancres (accessible)</h1>
-  <Tabs>
-    <TabsList id="species">
-      <TabsTab id="tab1" controls="Adelie" selected>Adelie</TabsTab>
-      <TabsTab id="tab2" controls="Chinstrap">Chinstrap</TabsTab>
-      <TabsTab id="tab3" controls="Gentoo">Gentoo</TabsTab>
+  <Tabs
+    class="!w-full !max-w-3xl !mx-auto !flex !flex-col !p-4 !bg-white !rounded-2xl"
+  >
+    <TabsList class="!flex !gap-2 !mb-2">
+      <TabsTab
+        class="!flex-1 !px-4 !py-2 !font-bold !border-2 !border-gray-200 !shadow-md hover:!bg-sky-100 hover:!text-sky-900 aria-[selected='true']:!bg-sky-600 aria-[selected='true']:!text-white"
+        id="tab1"
+        controls="Adelie"
+        selected
+      >
+        Adelie
+      </TabsTab>
+
+      <TabsTab
+        class="!flex-1 !px-4 !py-2 !font-bold !border-2 !border-gray-200 !shadow-md hover:!bg-sky-100 hover:!text-sky-900 aria-[selected='true']:!bg-sky-600 aria-[selected='true']:!text-white"
+        id="tab2"
+        controls="Chinstrap"
+      >
+        Chinstrap
+      </TabsTab>
+
+      <TabsTab
+        class="!flex-1 !px-4 !py-2 !font-bold !border-2 !border-gray-200 !shadow-md hover:!bg-sky-100 hover:!text-sky-900 aria-[selected='true']:!bg-sky-600 aria-[selected='true']:!text-white"
+        id="tab3"
+        controls="Gentoo"
+      >
+        Gentoo
+      </TabsTab>
     </TabsList>
-    <TabsPanel id="Adelie" labelledby="tab1" selected>
-      <h2 class="text-2xl font-bold mb-4">Penguins Adelie</h2>
+
+    <TabsPanel
+      id="Adelie"
+      labelledby="tab1"
+      selected
+      class="!p-6 !border-2 !border-gray-200 !rounded-b-lg !min-h-[10rem] !bg-white !shadow-md"
+    >
+      <h2 class="!text-2xl !font-bold !mb-4">Penguins Adelie</h2>
       <GraphicSpecies species="Adelie" />
     </TabsPanel>
 
-    <TabsPanel id="Chinstrap" labelledby="tab2">
-      <h2 class="text-2xl font-bold mb-4">Penguins Chinstrap</h2>
+    <TabsPanel
+      id="Chinstrap"
+      labelledby="tab2"
+      class="!p-6 !border-2 !border-gray-200 !rounded-b-lg !min-h-[10rem] !bg-white !shadow-md"
+    >
+      <h2 class="!text-2xl !font-bold !mb-4">Penguins Chinstrap</h2>
       <GraphicSpecies species="Chinstrap" />
     </TabsPanel>
 
-    <TabsPanel id="Gentoo" labelledby="tab3">
-      <h2 class="text-2xl font-bold mb-4">Penguins Gentoo</h2>
+    <TabsPanel
+      id="Gentoo"
+      labelledby="tab3"
+      class="!p-6 !border-2 !border-gray-200 !rounded-b-lg !min-h-[10rem] !bg-white !shadow-md"
+    >
+      <h2 class="!text-2xl !font-bold !mb-4">Penguins Gentoo</h2>
       <GraphicSpecies species="Gentoo" />
     </TabsPanel>
   </Tabs>
