@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GraphicSpecies from "../components/GraphicSpecies.astro";
+---
+
+<Layout>
+  <h1 class="text-2xl">Méthode 3 : Une seule page avec ancres</h1>
+  <nav class="m-6">
+    <ul class="flex justify-center space-x-4">
+      <li>
+        <a
+          href="#Adelie"
+          class="px-4 py-2 bg-white text-sky-800 rounded-lg shadow hover:bg-sky-100 hover:text-sky-900 transition"
+        >
+          Adelie
+        </a>
+      </li>
+      <li>
+        <a
+          href="#Chinstrap"
+          class="px-4 py-2 bg-white text-sky-800 rounded-lg shadow hover:bg-sky-100 hover:text-sky-900 transition"
+        >
+          Chinstrap
+        </a>
+      </li>
+      <li>
+        <a
+          href="#Gentoo"
+          class="px-4 py-2 bg-white text-sky-800 rounded-lg shadow hover:bg-sky-100 hover:text-sky-900 transition"
+        >
+          Gentoo
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 px-4 py-8"
+  >
+    <section
+      id="Adelie"
+      class="flex-shrink-0 snap-center bg-white rounded-2xl shadow-md p-6"
+    >
+      <h1 class="text-2xl font-bold text-center mb-4">Penguins Adelie</h1>
+      <GraphicSpecies species="Adelie" />
+    </section>
+
+    <section
+      id="Chinstrap"
+      class="flex-shrink-0 snap-center bg-white rounded-2xl shadow-md p-6"
+    >
+      <h1 class="text-2xl font-bold text-center mb-4">Penguins Chinstrap</h1>
+      <GraphicSpecies species="Chinstrap" />
+    </section>
+
+    <section
+      id="Gentoo"
+      class="flex-shrink-0 snap-center bg-white rounded-2xl shadow-md p-6"
+    >
+      <h1 class="text-2xl font-bold text-center mb-4">Penguins Gentoo</h1>
+      <GraphicSpecies species="Gentoo" />
+    </section>
+  </div>
+</Layout>

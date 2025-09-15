@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>R312 TP2 - Multipages/Singe-Page</title>
+  </head>
+  <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+    <Nav />
+    <main class="flex-1 flex flex-col items-center justify-center px-4">
+      <div class="w-full max-w-3xl bg-white rounded-2xl shadow-md p-8 m-8 flex flex-col gap-4">
+        <slot />
+      </div>
+    </main>
+  </body>
+</html>
