@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GraphicSpecies from "../components/GraphicSpecies.astro";
+import {
+  Tabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
+} from "accessible-astro-components";
+---
+
+<Layout>
+  <h1 class="text-2xl">Méthode 3 : Une seule page avec ancres (accessible)</h1>
+  <Tabs>
+    <TabsList id="species">
+      <TabsTab id="tab1" controls="Adelie" selected>Adelie</TabsTab>
+      <TabsTab id="tab2" controls="Chinstrap">Chinstrap</TabsTab>
+      <TabsTab id="tab3" controls="Gentoo">Gentoo</TabsTab>
+    </TabsList>
+    <TabsPanel id="Adelie" labelledby="tab1" selected>
+      <h2 class="text-2xl font-bold mb-4">Penguins Adelie</h2>
+      <GraphicSpecies species="Adelie" />
+    </TabsPanel>
+
+    <TabsPanel id="Chinstrap" labelledby="tab2">
+      <h2 class="text-2xl font-bold mb-4">Penguins Chinstrap</h2>
+      <GraphicSpecies species="Chinstrap" />
+    </TabsPanel>
+
+    <TabsPanel id="Gentoo" labelledby="tab3">
+      <h2 class="text-2xl font-bold mb-4">Penguins Gentoo</h2>
+      <GraphicSpecies species="Gentoo" />
+    </TabsPanel>
+  </Tabs>
+</Layout>
